@@ -1,0 +1,9 @@
+<resources>
+    <string name="app_name">Asesment1_RivaZahra</string>
+    <string name="judul_menu">Eksplor berbagai makanan khas Italia</string>
+    <string name="btn_submit">Cari</string>
+    <string name="foodies">Kumpulan makanan italia</string>
+    <string name="search_bar">Cari makanan favorit italia mu</string>
+    <string name="cari_invalid">Nama makanan tidak boleh kosong</string>
+    <string name="data_invalid">Makanan tidak ditemukan</string>
+</resources>
