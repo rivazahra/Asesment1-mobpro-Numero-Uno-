@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+    <item
+        android:iconTint="@color/white"
+        android:id="@+id/menu_hapus"
+        android:icon="@drawable/baseline_delete_24"
+        android:title="@string/hapus_histori"
+        app:showAsAction="ifRoom" />
+
+    <item
+        android:id="@+id/action_switch_layout"
+        android:icon="@drawable/ic_grid_view"
+        android:title="@string/switch_layout"
+        app:showAsAction="ifRoom" />
+
+
+
+
+<!--    <item-->
+<!--        android:id="@+id/cari"-->
+<!--        android:icon=""-->
+</menu>

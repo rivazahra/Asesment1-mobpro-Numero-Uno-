@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/navigation"
+    app:startDestination="@id/fragmentAdd">
+
+    <fragment
+        android:id="@+id/fragmentAdd"
+        android:name="org.d3if3039.asesment1_rivazahra.ui.add.FragmentAdd"
+        android:label="Tambah Makanan"
+        tools:layout="@layout/fragment_add" >
+        <action
+            android:id="@+id/action_fragmentAdd_to_historyFragment"
+            app:destination="@id/historyFragment" />
+        <action
+            android:id="@+id/action_fragmentAdd_to_fragmentSearch"
+            app:destination="@id/fragmentSearch" />
+        <action
+            android:id="@+id/action_fragmentAdd_to_aboutFragment"
+            app:destination="@id/aboutFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/fragmentSearch"
+        android:name="org.d3if3039.asesment1_rivazahra.ui.search.FragmentSearch"
+        android:label="Cari makanan"
+        tools:layout="@layout/fragment_search" />
+    <fragment
+        android:id="@+id/historyFragment"
+        android:name="org.d3if3039.asesment1_rivazahra.ui.histori.HistoryFragment"
+        android:label="History"
+        tools:layout="@layout/fragment_history" />
+    <fragment
+        android:id="@+id/aboutFragment"
+        android:name="org.d3if3039.asesment1_rivazahra.ui.about.AboutFragment"
+        android:label="Tentang kami"
+        tools:layout="@layout/fragment_about"/>
+
+</navigation>

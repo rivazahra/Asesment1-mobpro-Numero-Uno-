@@ -2,8 +2,21 @@
     <string name="app_name">Asesment1_RivaZahra</string>
     <string name="judul_menu">Eksplor berbagai makanan khas Italia</string>
     <string name="btn_submit">Cari</string>
+    <string name="btn_tambah">Tambah</string>
+    <string name="namaMakanan">Nama Makanan</string>
     <string name="foodies">Kumpulan makanan italia</string>
     <string name="search_bar">Cari makanan favorit italia mu</string>
     <string name="cari_invalid">Nama makanan tidak boleh kosong</string>
+    <string name="hapus_histori">Hapus Histori</string>
+    <string name="hapus">Hapus</string>
+    <string name="Bagikan">Bagikan</string>
+    <string name="switch_layout">Ubah tampilan</string>
+    <string name="judulMakanan">Pizza</string>
+    <string name="Deskripsi">Pizza adalah makanan khas italia, yang sudah mendunia dan di gemari oleh banyak orang</string>
+    <string name="batal">Batal</string>
+    <string name="Deskripsi_about">Numero uno merupakan aplikasi pendataan makanan italia, Mari jelajahi kekayaan kuliner Italia dari pilihan menu yang lengkap melalui aplikasi kami.</string>
+    <string name="konfirmasi_hapus">Ingin menghapus data histori?</string>
     <string name="data_invalid">Makanan tidak ditemukan</string>
+    <string name="gambarMakanan">URL Gambar Makanan</string>
+    <string name="dataKosong">Data masih kosong</string>
 </resources>

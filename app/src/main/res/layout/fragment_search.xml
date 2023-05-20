@@ -3,9 +3,9 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:layout_height="match_parent"
 
-    tools:context=".HomeActivity">
+    android:layout_height="match_parent"
+    tools:context=".ui.search.FragmentSearch">
 
     <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
@@ -20,40 +20,41 @@
             android:layout_marginTop="26dp"
             android:layout_marginEnd="16dp"
             android:layout_marginBottom="10dp"
+
             android:backgroundTint="#508E24"
             android:fontFamily="@font/kurale"
             android:gravity="center"
             android:text="@string/judul_menu"
-            android:textSize="20sp"
-            app:layout_constraintBottom_toTopOf="@id/textInputLayout"
+            android:textColor="@color/orange"
+            android:textSize="24sp"
+            app:layout_constraintBottom_toTopOf="@id/pencarianInput"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent" />
 
 
-
         <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/pencarianInput"
             style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
-            android:id="@+id/textInputLayout"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:hint="@string/search_bar"
-            app:startIconDrawable="@drawable/baseline_restaurant_menu_24"
             android:layout_marginStart="16dp"
-        android:layout_marginTop="24dp"
-            android:layout_marginBottom="16dp"
+            android:layout_marginTop="24dp"
             android:layout_marginEnd="16dp"
+            android:layout_marginBottom="16dp"
+            android:hint="@string/search_bar"
             app:layout_constraintTop_toBottomOf="@+id/textView"
+            app:startIconDrawable="@drawable/baseline_restaurant_menu_24"
             tools:layout_editor_absoluteX="16dp">
 
             <com.google.android.material.textfield.TextInputEditText
-                android:id="@+id/pencarian_inp"
+                android:id="@+id/textPencarian"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="40dp"
                 android:textColor="#FF272572"
 
-                />
+                android:textColorHint="@color/orange2" />
 
         </com.google.android.material.textfield.TextInputLayout>
 
@@ -63,40 +64,40 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginTop="28dp"
-            android:textSize="15sp"
             android:text="@string/btn_submit"
+
             android:textColor="#090909"
+            android:textSize="15sp"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHorizontal_bias="0.498"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/textInputLayout" />
+            app:layout_constraintTop_toBottomOf="@+id/pencarianInput" />
 
-        <ImageView
-            android:contentDescription="@string/foodies"
-            android:id="@+id/gambar"
-            android:layout_width="300dp"
-            android:layout_marginTop="16dp"
-            android:layout_height="290dp"
-            android:foregroundGravity="center_horizontal"
-            tools:src="@drawable/pasta"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@id/buttonCari" />
+<!--        <ImageView-->
+<!--            android:id="@+id/gambar"-->
+<!--            android:layout_width="300dp"-->
+<!--            android:layout_height="290dp"-->
+<!--            android:layout_marginTop="16dp"-->
+<!--            android:contentDescription="@string/foodies"-->
+<!--            android:foregroundGravity="center_horizontal"-->
+<!--            app:layout_constraintEnd_toEndOf="parent"-->
+<!--            app:layout_constraintStart_toStartOf="parent"-->
+<!--            app:layout_constraintTop_toBottomOf="@id/buttonCari"-->
+<!--            tools:src="@drawable/pasta" />-->
 
         <TextView
             android:id="@+id/nama"
-
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_marginTop="8dp"
             android:layout_marginEnd="6dp"
             android:fontFamily="@font/kurale"
             android:gravity="center"
-
+            android:textColor="@color/orange"
             android:textSize="34sp"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/gambar"
+            app:layout_constraintTop_toBottomOf="@+id/buttonCari"
             tools:text="Pasta" />
 
         <TextView
@@ -104,15 +105,17 @@
             android:id="@+id/deskripsiResep"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginStart="8dp"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="16dp"
+            android:layout_marginEnd="16dp"
             android:fontFamily="@font/baloo_bhai_2_medium"
-
+            android:textColor="#717171"
             app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@id/nama"
             app:layout_constraintVertical_bias="1.0"
             tools:text="Pasta dari Italia adalah hidangan yang terbuat dari adonan tepung terigu, air, dan telur (atau tanpa telur dalam beberapa jenis pasta) yang dicetak menjadi berbagai bentuk seperti spaghetti, penne, farfalle, dan lain-lain. Pasta biasanya dimasak dalam air yang direbus dan dihidangkan dengan berbagai macam saus seperti saus tomat, saus pesto, saus krim, atau saus daging" />
-
 
     </androidx.constraintlayout.widget.ConstraintLayout>
 
