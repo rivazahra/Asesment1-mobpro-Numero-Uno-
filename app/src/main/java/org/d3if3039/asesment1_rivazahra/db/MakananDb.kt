@@ -18,7 +18,6 @@ abstract class MakananDb : RoomDatabase() {
         fun getInstance(context: Context): MakananDb {
             synchronized(this) {
                 var instance = INSTANCE
-
                 if (instance == null) {
                     instance = Room.databaseBuilder(
                         context.applicationContext,
