@@ -26,4 +26,5 @@ object MakananApi{
     val service: MakananApiService by lazy {
         retrofit.create(MakananApiService::class.java)
     }
+    enum class ApiStatus{LOADING, SUCCESS, FAILED}
 }
