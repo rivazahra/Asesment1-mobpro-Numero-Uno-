@@ -7,6 +7,7 @@ import retrofit2.Retrofit
 import retrofit2.converter.scalars.ScalarsConverterFactory
 import retrofit2.create
 import retrofit2.http.GET
+import retrofit2.http.Url
 
 private const val BASE_URL = "https://raw.githubusercontent.com/rivazahra/Asesment1-mobpro-Numero-Uno-/static-api/static_api.json"
 
@@ -22,9 +23,13 @@ interface MakananApiService {
     @GET("static-api.json")
     suspend fun getMakanan() : List<KumpulanMakanan>
 }
-object MakananApi{
+object MakananApi {
     val service: MakananApiService by lazy {
         retrofit.create(MakananApiService::class.java)
     }
-    enum class ApiStatus{LOADING, SUCCESS, FAILED}
+
+    fun getMakananUrl(imageUrl: String): String {
+        return "BASE_URL$imageUrl.jpg"
+    }
 }
+    enum class ApiStatus{LOADING, SUCCESS, FAILED}

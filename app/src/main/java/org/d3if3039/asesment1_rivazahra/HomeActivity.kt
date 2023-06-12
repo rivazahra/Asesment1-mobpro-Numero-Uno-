@@ -18,6 +18,11 @@ import org.d3if3039.asesment1_rivazahra.databinding.ActivityHomeBinding
 import org.d3if3039.asesment1_rivazahra.databinding.ActivityMainBinding
 
 class HomeActivity : AppCompatActivity() {
+
+    companion object{
+        const val CHANNEL_ID = "update"
+        const val PERMISSION_REQUEST_CODE = 1
+    }
     private lateinit var binding: ActivityMainBinding
     private lateinit var navController : NavController
 

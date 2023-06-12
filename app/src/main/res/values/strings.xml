@@ -5,10 +5,13 @@
     <string name="btn_tambah">Tambah</string>
     <string name="namaMakanan">Nama Makanan</string>
     <string name="foodies">Kumpulan makanan italia</string>
+    <string name="notif_title">Ada makanan baru!</string>
+    <string name="notif_text">Yuk di cek..</string>
     <string name="search_bar">Cari makanan favorit italia mu</string>
     <string name="cari_invalid">Nama makanan tidak boleh kosong</string>
     <string name="hapus_histori">Hapus Histori</string>
     <string name="hapus">Hapus</string>
+    <string name="message">%1$s diklik!</string>
     <string name="Bagikan">Bagikan</string>
     <string name="switch_layout">Ubah tampilan</string>
     <string name="judulMakanan">Pizza</string>
