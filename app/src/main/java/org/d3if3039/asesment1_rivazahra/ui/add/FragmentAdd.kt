@@ -1,8 +1,6 @@
 package org.d3if3039.asesment1_rivazahra.ui.add
 
-import android.content.Intent
 import android.os.Bundle
-import android.provider.LiveFolders.INTENT
 import android.text.TextUtils
 import android.view.*
 import android.widget.Toast
@@ -48,6 +46,12 @@ class FragmentAdd : Fragment() {
             R.id.historyFragment ->{
                 findNavController().navigate(
                     R.id.action_fragmentAdd_to_historyFragment
+                )
+                return true
+            }
+            R.id.kumpulanFragment->{
+                findNavController().navigate(
+                    R.id.action_fragmentAdd_to_kumpulanFragment
                 )
                 return true
             }

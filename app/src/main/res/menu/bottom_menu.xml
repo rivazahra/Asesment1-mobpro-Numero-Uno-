@@ -17,5 +17,13 @@
         android:title="History"
         android:icon="@drawable/baseline_history"
         />
+    <item
+        android:id="@+id/kumpulanFragment"
+        android:title="Kumpulan Makanan"
+        android:icon="@drawable/baseline_dataset_24"
+        />
+
+
+
 
 </menu>

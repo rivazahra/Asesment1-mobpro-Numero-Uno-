@@ -13,10 +13,9 @@ import androidx.lifecycle.ViewModelProvider
 import androidx.recyclerview.widget.DividerItemDecoration
 import androidx.recyclerview.widget.RecyclerView
 import org.d3if3039.asesment1_rivazahra.HomeActivity
-import org.d3if3039.asesment1_rivazahra.Manifest
 import org.d3if3039.asesment1_rivazahra.databinding.FragmentKumpulanfoodBinding
-import org.d3if3039.asesment1_rivazahra.databinding.KumpulanListBinding
 import org.d3if3039.asesment1_rivazahra.network.ApiStatus
+import org.d3if3039.asesment1_rivazahra.network.MakananApi
 
 class KumpulanFragment : Fragment() {
 
@@ -47,9 +46,12 @@ class KumpulanFragment : Fragment() {
         super.onViewCreated(view, savedInstanceState)
 
         viewModel.getData().observe(viewLifecycleOwner) {
-
-
+            myAdapter.updateData(it)
         }
+        viewModel.getStatus().observe(viewLifecycleOwner){
+            updateProgress(it)
+        }
+        viewModel.scheduleUpdater(requireActivity().application)
     }
 
     private fun updateProgress(status: ApiStatus) {
@@ -67,6 +69,8 @@ class KumpulanFragment : Fragment() {
             ApiStatus.FAILED -> {
                 binding.progressbar.visibility = View.GONE
                 binding.networkError.visibility = View.VISIBLE
+
+
             }
         }
     }

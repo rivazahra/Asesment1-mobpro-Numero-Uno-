@@ -14,15 +14,12 @@ import androidx.work.WorkerParameters
 import org.d3if3039.asesment1_rivazahra.HomeActivity
 import org.d3if3039.asesment1_rivazahra.R
 
-
 class UpdateWorker(context: Context, workerParams: WorkerParameters) : CoroutineWorker(context, workerParams){
 
     companion object {
         const val WORK_NAME = "updater"
         private const val NOTIFICATION_ID = 44
     }
-
-
 
     override suspend fun doWork(): Result {
         if(ActivityCompat.checkSelfPermission(
@@ -31,7 +28,7 @@ class UpdateWorker(context: Context, workerParams: WorkerParameters) : Coroutine
             Log.e("Worker", "Tidak diberikan izin notifikasi")
             return Result.failure()
         }
-
+        Log.d("Worker", "Menjalankan proses background..")
         val builder = NotificationCompat.Builder(applicationContext, HomeActivity.CHANNEL_ID)
             .setSmallIcon(R.mipmap.ic_launcher_round)
             .setContentTitle(applicationContext.getString(R.string.notif_title))
@@ -41,6 +38,7 @@ class UpdateWorker(context: Context, workerParams: WorkerParameters) : Coroutine
             .setAutoCancel(true)
         val manager = NotificationManagerCompat.from(applicationContext)
         manager.notify(NOTIFICATION_ID, builder.build())
+
         return Result.success()
     }
 

@@ -19,6 +19,9 @@
         <action
             android:id="@+id/action_fragmentAdd_to_aboutFragment"
             app:destination="@id/aboutFragment" />
+        <action
+            android:id="@+id/action_fragmentAdd_to_kumpulanFragment"
+            app:destination="@id/kumpulanFragment" />
     </fragment>
     <fragment
         android:id="@+id/fragmentSearch"
@@ -35,5 +38,10 @@
         android:name="org.d3if3039.asesment1_rivazahra.ui.about.AboutFragment"
         android:label="Tentang kami"
         tools:layout="@layout/fragment_about"/>
+    <fragment
+        android:id="@+id/kumpulanFragment"
+        android:name="org.d3if3039.asesment1_rivazahra.ui.kumpulanMakanan.KumpulanFragment"
+        android:label="Gallery Makanan"
+        tools:layout="@layout/fragment_kumpulanfood" />
 
 </navigation>
